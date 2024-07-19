@@ -1,0 +1,100 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 86vh;
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
+.background {
+  background-color: hsla(0, 0%, 92%, 0);
+
+}
+
+.rounded-4 {
+  border-radius: 1rem;
+}
+
+.img-fluid {
+  position: relative;
+  max-width: 100%;
+  left: 100px;
+  bottom: 20px;
+  height: auto;
+  width: 350px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: hsl(217, 10%, 50.8%); /* Adjust text color as needed */
+  margin-top: 1rem; /* Space between logo and text */
+  text-align: left; /* Center text */
+  line-height: 1.5; /* Adjust line height for readability */
+  max-width: 100%;  /* Ajusta el espaciado entre líneas para mejorar la legibilidad */
+}
+
+.custom-form-container {
+  position: relative;
+  left: 500px;
+  bottom: 100px; /* Adjust this value to move the form left or right */
+  width: 800px; /* Adjust the width to control the size */
+}
+
+.larger-form {
+  padding: 1rem;
+  min-height: 300px; /* Set a minimum height for the form */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-effect {
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+}
+
+.input-effect:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+}
+.input-effect:focus::placeholder {
+  opacity: 0; /* Hide placeholder text when input is focused */
+}
+
+.btn-effect {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-effect:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h-100 {
+  height: 100%;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+@media (min-width: 992px) {
+  .rounded-tr-lg-0 {
+    border-top-right-radius: 0;
+  }
+
+  .rounded-bl-lg-5 {
+    border-bottom-left-radius: 0.5rem;
+  }
+}

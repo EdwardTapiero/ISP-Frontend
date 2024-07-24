@@ -1,0 +1,41 @@
+/* Estilos de la barra de navegación */
+.navbar-custom {
+  background-color: #007bff; /* Azul */
+  color: #ffffff; /* Blanco */
+}
+
+.navbar-custom .navbar-brand,
+.navbar-custom .nav-link {
+  color: #ffffff; /* Blanco */
+  text-decoration: none;
+  transition: color 0.3s, transform 0.3s; /* Transición suave para color y transformación */
+}
+
+/* Espacio entre los enlaces */
+.navbar-custom .nav-link {
+  margin-left: 1rem;
+}
+
+/* Espacio entre el enlace de navegación y el margen automático */
+.ml-auto {
+  margin-left: auto;
+}
+
+/* Efecto hover */
+.navbar-custom .nav-link:hover {
+  color: #d4d4d4; /* Color blanco más claro para el hover */
+  transform: scale(1.05); /* Efecto de aumento en el hover */
+}
+
+/* Estilo del enlace activo */
+.navbar-custom .nav-link.active {
+  color: #ffcc00; /* Color dorado para el enlace activo */
+  font-weight: bold; /* Negrita para el enlace activo */
+}
+
+/* Efecto de transición para el enlace activo */
+.navbar-custom .nav-link:focus,
+.navbar-custom .nav-link:active {
+  color: #ffcc00; /* Color dorado para el enlace activo */
+  transform: scale(1.05); /* Efecto de aumento en el clic */
+}

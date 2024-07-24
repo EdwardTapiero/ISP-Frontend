@@ -2,7 +2,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { LoginComponent } from './login/login.component';
-
+import { NavbarComponent } from './navbar/navbar/navbar.component';
 
 
 @NgModule({
@@ -11,7 +11,7 @@ import { LoginComponent } from './login/login.component';
   ],
   declarations:[
     LoginComponent,
-   
+    NavbarComponent
   ],
  imports:[
     LoginComponent

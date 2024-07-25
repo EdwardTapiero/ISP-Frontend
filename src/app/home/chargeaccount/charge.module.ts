@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { PageLayoutComponent } from './page/page.component';
 import { ChargeRoutingModule } from './charge-routing.module';
+import { NavbarModule } from '../navbar/navbar.module';
 
 @NgModule({
   declarations: [
@@ -9,7 +10,8 @@ import { ChargeRoutingModule } from './charge-routing.module';
   ],
   imports: [
     CommonModule,
-    ChargeRoutingModule
+    ChargeRoutingModule,
+    NavbarModule
   ]
 })
 

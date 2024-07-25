@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+
 const routes: Routes = [
   {
     path: 'home',
@@ -14,6 +15,11 @@ const routes: Routes = [
     path: 'chargeaccount',
     loadChildren: () => import('./home/chargeaccount/charge.module').then( m => m.ChargeModule ),
   },
+  {
+    path: 'navbar',
+    loadChildren: () => import('./home/navbar/navbar.module').then( m => m.NavbarModule ),
+  },
+
   {
     path: '',
     redirectTo: 'home',

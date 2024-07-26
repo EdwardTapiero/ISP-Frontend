@@ -1,2 +1,42 @@
 <app-navbar></app-navbar>
-<p>page works!</p>
+<div class="px-4 py-5 px-md-5 text-center text-lg-start" >
+<div class="container ">
+  <div class="mb-5">
+    <h2 class="titulo">Cargar Cuentas de Cobro</h2>
+  </div>
+  <form (ngSubmit)="onSubmit()" #cuentasForm="ngForm"
+    class="w-100 h-100 form-with-bottom-space d-flex flex-column justify-content-between">
+    <div data-mdb-input-init class="form-outline mb-4">
+      <label for="proveedor" class="form-label">Nombre del Proveedor</label>
+      <input type="text" id="proveedor" class="form-control input-effect" ngModel name="proveedor" required
+        pattern="[a-zA-Z0-9\s\.\,\-\_]*" #proveedor="ngModel" />
+      <div *ngIf="proveedor.invalid && (proveedor.dirty || proveedor.touched)" class="text-danger">
+        <div *ngIf="proveedor.errors?.['required']">El nombre del proveedor es obligatorio.</div>
+        <div *ngIf="proveedor.errors?.['pattern']">El nombre del proveedor no es válido.</div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="valor" class="form-label">Valor de la Cuenta</label>
+      <input type="text" id="valor" class="form-control input-effect" ngModel name="valor" required mask="separator.0" prefix="COP "
+        #valor="ngModel" />
+      <div *ngIf="valor.invalid && (valor.dirty || valor.touched)" class="text-danger">
+        <div *ngIf="valor.errors?.['required']">El valor de la cuenta es obligatorio.</div>
+        <div *ngIf="valor.errors?.['pattern']">El valor de la cuenta debe ser numérico.</div>
+      </div>
+    </div>
+
+    <div class="mb-4">
+      <label for="archivos" class="form-outline mb-4">Cargar Archivos</label>
+      <input type="file" id="archivos" class="form-control input-effect" (change)="onFileChange($event)" multiple
+        accept=".pdf,.jpg,.jpeg,.png" />
+    </div>
+    <div>
+      <button type="button" data-mdb-button-init data-mdb-ripple-init
+        class="btn btn-primary btn-block mb-4 btn-effect ">
+        Ingresar
+      </button>
+    </div>
+  </form>
+</div>
+</div>

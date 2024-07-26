@@ -1,0 +1,40 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.form-label,
+.form-outline {
+  font-size: 1.2rem; /* Ajusta el tamaño según sea necesario */
+   /* Opcional: negrita para destacar los labels */
+  margin-bottom: 0.5rem; /* Ajusta el espaciado entre el label y el campo */
+}
+
+
+.btn-effect {
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn-effect:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+.input-effect:focus::placeholder {
+  opacity: 0; /* Hide placeholder text when input is focused */
+}
+.input-effect {
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 0.75rem 1.25rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+}
+.input-effect:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+}
+.input-effect:focus::placeholder {
+  opacity: 0; /* Hide placeholder text when input is focused */
+}

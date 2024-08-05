@@ -1,0 +1,78 @@
+
+<app-navbar></app-navbar>
+<div class="container mt-5">
+  <div class="filter-form">
+    <form (ngSubmit)="filtrar()" #filterForm="ngForm">
+      <div class="row mb-4">
+        <div class="col-md-4">
+          <label for="nombre" class="form-label">Nombre</label>
+          <input
+            type="text"
+            id="nombre"
+            class="form-control"
+            [(ngModel)]="filtro.nombre"
+            name="nombre"
+            placeholder="Buscar por nombre"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="fechaDesde" class="form-label">Fecha Desde</label>
+          <input
+            type="date"
+            id="fechaDesde"
+            class="form-control"
+            [(ngModel)]="filtro.fechaDesde"
+            name="fechaDesde"
+          />
+        </div>
+        <div class="col-md-4">
+          <label for="fechaHasta" class="form-label">Fecha Hasta</label>
+          <input
+            type="date"
+            id="fechaHasta"
+            class="form-control"
+            [(ngModel)]="filtro.fechaHasta"
+            name="fechaHasta"
+          />
+        </div>
+      </div>
+      <div class="row mb-5">
+        <div class="col-md-12 text-start">
+          <button type="submit" class="btn btn-primary me-2">Filtrar</button>
+          <button type="button" class="btn btn-secondary" (click)="limpiar()">Limpiar</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<!-- table.component.html -->
+<div class="container mt-5">
+  <table class="table">
+    <thead>
+      <tr>
+        <th class="text-start">Nombre</th>
+        <th class="text-center">Valor</th>
+        <th class="text-center">Fecha de Ingreso</th>
+        <th class="text-end">Acciones</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let item of items">
+        <td class="text-start">{{ item.nombre }}</td>
+        <td class="text-center">{{ item.valor }}</td>
+        <td class="text-center">{{ item.fechaIngreso | date }}</td>
+        <td class="text-end">
+          <div class="action-buttons">
+            <button class="btn btn-success btn-sm me-2" (click)="aprobar(item)">
+              <i class="bi bi-check-circle"></i> Aprobar
+            </button>
+            <button class="btn btn-danger btn-sm" (click)="rechazar(item)">
+              <i class="bi bi-x-circle"></i> Rechazar
+            </button>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

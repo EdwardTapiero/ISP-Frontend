@@ -1,0 +1,22 @@
+
+.filter-form {
+  margin: 9px;
+}
+
+.filter-form .form-label {
+  font-weight: bold;
+}
+
+.filter-form .form-control {
+  margin-bottom: 10px;
+}
+
+.filter-form .btn {
+  margin-right: 10px;
+}
+
+/* Estilos adicionales para el selector de fechas */
+ngb-datepicker {
+  display: block;
+  width: 100%;
+}

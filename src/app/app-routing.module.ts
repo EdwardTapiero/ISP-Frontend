@@ -19,6 +19,10 @@ const routes: Routes = [
     path: 'navbar',
     loadChildren: () => import('./home/navbar/navbar.module').then( m => m.NavbarModule ),
   },
+  {
+    path: 'ListAccount',
+    loadChildren: () => import('./home/listAccount/listAccount.module').then( m => m.ListAccountModule ),
+  },
 
   {
     path: '',
